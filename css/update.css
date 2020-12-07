@@ -237,11 +237,11 @@
   }
   
   .btn--green {
-    background: #358758;
+    background: #006F78;
   }
   
   .btn--green:hover {
-    background: #38634a;
+    background: #004B51;
   }
 
   .btn--red {
@@ -252,13 +252,6 @@
     background: #800000;
   }
   
-  .btn--blue {
-    background: #006F78;
-  }
-
-  .btn--blue:hover {
-    background: #004B51;
-  }
   
   /* ==========================================================================
      #DATE PICKER
@@ -497,7 +490,7 @@
   }
   
   .card-2 .card-heading {
-    background: url("../img/bg-heading-02.png") top left/cover no-repeat;
+    background: url("../img/bg-heading-01.png") top left/cover no-repeat;
     width: 35%;
     display: table-cell;
   }
@@ -548,7 +541,7 @@
   .float:hover{
     background-color:#004B51;
   }
-
+  
   .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
