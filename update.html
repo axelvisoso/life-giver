@@ -10,45 +10,44 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
     <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
-    <link href="css/registro.css" rel="stylesheet" media="all">
+    <link href="css/update.css" rel="stylesheet" media="all">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<link rel="icon" href="img/logo.png">
 </head>
 
-<body>
+<body  onload="getDataUpdate()">
     <a href="#" class="float">
-        <i class="fa fa-undo my-float" onclick="regresar()"></i>
+        <i class="fa fa-undo my-float" onclick="goBack()"></i>
     </a>
     <div class="page-wrapper bg-blue p-t-180 p-b-100 font-robo">
         <div class="wrapper wrapper--w960">
             <div class="card card-2">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title">Registrate</h2>
+                    <h2 class="title">Actualizar datos</h2>
                     <form method="POST">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Nombre(s)" id="fisrtName">
+                                    <input class="input--style-2" type="text" placeholder="Nombre(s)" id="fisrtNameU">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Apellido(s)" id="lastName">
+                                    <input class="input--style-2" type="text" placeholder="Apellido(s)" id="lastNameU">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2 js-datepicker" type="text" placeholder="Fecha de nacimiento" id="nacimiento">
-                                    <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                                    <input class="input--style-2" type="text" placeholder="Usuario" id="userU">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
-                                        <select id="tipoSangre">
+                                        <select id="tipoSangreU">
                                             <option disabled="disabled" selected="selected">Tipo de sangre</option>
                                             <option>O negativo</option>
                                             <option>O positivo</option>
@@ -67,50 +66,35 @@
                         <div class="row row-space">
                             <div class="col-3">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Pais" id="pais">
+                                    <input class="input--style-2" type="text" placeholder="Pais" id="paisU">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Estado" id="estado">
+                                    <input class="input--style-2" type="text" placeholder="Estado" id="estadoU">
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Ciudad" id="ciudad">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-2" type="text" placeholder="Email" id="email">
-                        </div>
-                        <div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Telefono" id="telefono">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Edad" id="edad">
+                                    <input class="input--style-2" type="text" placeholder="Ciudad" id="ciudadU">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Usuario" id="user">
+                                    <input class="input--style-2" type="text" placeholder="Telefono" id="telefonoU">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
-                                    <input class="input--style-2" type="text" placeholder="Contraseña" id="password">
+                                    <input class="input--style-2" type="text" placeholder="Edad" id="edadU">
                                 </div>
                             </div>
                         </div>
 
                         <div class="p-t-30">
-                            <button class="btn btn--radius btn--blue" type="button" onclick="validar()">Continuar</button>
+                            <button class="btn btn--radius btn--blue" type="button" onclick="updateUser()">Continuar</button>
                         </div>
                     </form>
                 </div>

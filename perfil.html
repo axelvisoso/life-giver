@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/home.css">
+    <link href="css/registro.css" rel="stylesheet" media="all">
     <link rel="icon" href="img/logo.png">
     <title>Life Giver</title>
   </head>
-  <body>
+  <body onload="getData()">
    
     <header class="header">
         <div class="bg-dark ">
@@ -33,18 +34,24 @@
 
     <div class="container h-100 ">
 		<div class="d-flex justify-content-center h-100">
-            <div class="card">
-                <img src="img/default.png" style="width: 300px; height: 300px;">
-                <h1 id="nombre">Jean Vaca</h1>
-                <p id="mail">jeanca.valla@gmail.com</p>
-                <p id="telefono">452-105-2954</p>
-                <p id="tipoSangre">O negativo</p>
-                <p id="entidad">Leon,Guanajuato Mexico</p>
-                <p id="ubicacion"></p>
+            <div class="card p-2">
+                <img src="img/default.png" style="width: 350px; height: 300px;" id="myImage">
+                <h1 id="nombreP"></h1>
+                <p id="mailP"></p>
+                <p id="telefonoP"></p>
+                <p id="tipoSangreP"></p>
+                <p id="entidadP"></p>
+                <p id="ubicacionP"></p>
+                <div class="p-t-30">
+                  <button class="btn btn--radius btn--blue" type="button" style="margin-bottom: 1rem;" onclick="update()">Actualizar</button>
+                  <a href="https://www.paypal.me/lifegiveudlb/200" target="_blank"><button class="btn btn--radius btn--green" type="button" style="margin-bottom: 1rem;" onclick="document.getElementById('myImage').src='img/premium.png'">Premium</button></a>
+                  <button class="btn btn--radius btn--red" type="button" style="margin-bottom: 1rem;" onclick="regresar()">Salir</button>
+              </div>
             </div>
         </div>
     </div>
     
+    <script src="js/registro.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
     <script src="js/perfil.js"></script>

@@ -11,7 +11,7 @@
     <link rel="icon" href="img/logo.png">
     <title>Life Giver</title>
   </head>
-  <body>
+  <body  onload="getTabla()">
    
     <header class="header">
         <div class="bg-dark ">
@@ -34,7 +34,7 @@
     </header>
 
     <div class="container-fluid ">
-        <div class="container bodym rounded shadow-lg">
+        <div class="container rounded">
             <div class="row m-3">
                 <div class="col-12 p-3">
                     <div id="mapa"></div>
@@ -43,12 +43,35 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="js/hospitales.js"></script>
-    <script type="text/javascript" src="js/mapa.js"></script>
+    <div class="container-fluid ">
+      <div class="container bodym rounded shadow-lg">
+          <div class="row m-5 parent">
+            <h1>Posts</h1>
+              <div class="col-12 paddingPTL"></div>
+                
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Nombre</td>
+                      <td>Apellido</td>
+                      <td>Tipo de Sangre</td>
+                      <td>Descripcion</td>
+                    </tr>
+                  </thead>
+                  <tbody id="table_body"></tbody>
+                </table>
+        </div>
+      </div>
+    </div>
 
-    <script src="js/hospitales.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase.js"></script>
+    <script type="text/javascript" src="js/hospitales.js"></script>
+    <script type="text/javascript" src="js/postubi.js"></script>
+    <script type="text/javascript" src="js/mapa.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/firebase.js"></script>
   </body>
 </html>

@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="css/posts.css">
     <link rel="icon" href="img/logo.png">
     <title>Life Giver</title>
   </head>
@@ -36,42 +47,53 @@
 
     <div class="container-fluid ">
       <div class="container bodym rounded shadow-lg">
-          <div class="row m-5">
-              <div class="col-12 p-5">
+          <div class="row m-2">
+              <div class="col-12 p-2">
                 <h1 style="padding-left: 1rem;">Generar nuevo post</h1>
                 <div class="w3-row-padding">
                   <div class="w3-col">
                     <form class="w3-container w3-card-4">
                       <div class="w3-section">
                         <label>Nombre</label>
-                        <input class="w3-input" type="text">
+                        <input class="w3-input" type="text" id="txtNombrePost">
                       </div>
                       <div class="w3-section">
                         <label>Apellido</label>
-                        <input class="w3-input" type="text">
+                        <input class="w3-input" type="text" id="txtApellidoPost">
                       </div>
                       <div class="w3-section">
-                        <div class="w3-dropdown-hover">
-                          <button class="w3-button w3-theme">Tipo de sangre <i class="fa fa-caret-down"></i></button>
-                          <div class="w3-dropdown-content w3-bar-block w3-border">
-                            <a href="#" class="w3-bar-item w3-button">1</a>
-                            <a href="#" class="w3-bar-item w3-button">2</a>
-                            <a href="#" class="w3-bar-item w3-button">3</a>
+                        <label>Tipo de sangre</label>
+                        <div class="input-group">
+                          <div class="rs-select2 js-select-simple select--no-search" style="width: 100%; margin-top: 5px;">
+                                <select id="tipoSangrePost">
+                                  <option disabled="disabled" selected="selected">Select one...</option>
+                                  <option>O negativo</option>
+                                  <option>O positivo</option>
+                                  <option>A negativo</option>
+                                  <option>A positivo</option>
+                                  <option>B negativo</option>
+                                  <option>B positivo</option>
+                                  <option>AB negativo</option>
+                                  <option>AB positivo</option>
+                              </select>
+                              <div class="select-dropdown"></div>
                           </div>
                         </div>
                       </div>
                       <div class="w3-section">
                         <label>Descripcion</label>
-                        <input class="w3-input" type="text">
+                        <div>
+                          <textarea name="Text1" style="width: 100%;" rows="3" id="txtDescriptionPost"></textarea>
+                        </div>
                       </div>
                       <div class="w3-row">
                         <div class="w3-section">
-                          <label>Ubicacion</label>
-                          <input class="w3-input" type="text">
+                          <label>Ubicacion</label><label style="color: gray; font-size: x-small;">(Si no seleccionas otra ubicacion se usara la actual)</label>
+                            <div id="mapa"></div>
                         </div>
-                        <div class="w3-section">
-                          <button class="w3-button w3-theme">Buscar</button>
-                        </div>
+                      </div>
+                      <div class="p-t-30">
+                        <button class="btn btn--radius btn--blue" style="margin-bottom: 1rem;" type="button" onclick="makePost()">Continuar</button>
                       </div>
                   </div>
               </div>
@@ -79,9 +101,18 @@
       </div>
     </div>
 
-
+    <script src="js/posts.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/datepicker/moment.min.js"></script>
+    <script src="vendor/datepicker/daterangepicker.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/registro.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="js/firebase.js"></script>
   </body>
 </html>
