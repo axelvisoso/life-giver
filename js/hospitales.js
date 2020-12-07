@@ -13,7 +13,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital Villas del Campestre"
             },
-            "id": 51
+            "id": 1
         },
         {
             "geometry": {
@@ -27,7 +27,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital Angeles de Leon"
             },
-            "id": 52
+            "id": 2
         },
         {
             "geometry": {
@@ -41,7 +41,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Torre Medica Sante"
             },
-            "id": 54
+            "id": 3
         },
         {
             "geometry": {
@@ -55,7 +55,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital Medica Poniente"
             },
-            "id": 55
+            "id": 4
         },
         {
             "geometry": {
@@ -69,7 +69,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Centro de Bienestar IMSS Solidaridad"
             },
-            "id": 57
+            "id": 5
         },
         {
             "geometry": {
@@ -83,7 +83,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital de Especialidades Materno Infantil"
             },
-            "id": 58
+            "id": 6
         },
         {
             "geometry": {
@@ -97,7 +97,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Sanefro"
             },
-            "id": 74
+            "id": 7
         },
         {
             "geometry": {
@@ -111,7 +111,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Clinica Hospital San Jose de las Piletas"
             },
-            "id": 74
+            "id": 8
         },
         {
             "geometry": {
@@ -125,7 +125,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital San Gabriel"
             },
-            "id": 74
+            "id": 9
         },
         {
             "geometry": {
@@ -139,7 +139,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital Medica Vida"
             },
-            "id": 74
+            "id": 10
         },
         {
             "geometry": {
@@ -153,7 +153,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Delegacion Estatal del IMSS en Guanajuato"
             },
-            "id": 74
+            "id": 11
         },
         {
             "geometry": {
@@ -167,7 +167,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Hospital Siena del Moral"
             },
-            "id": 74
+            "id": 12
         },
         {
             "geometry": {
@@ -181,7 +181,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "Medica Campestre"
             },
-            "id": 74
+            "id": 13
         },
         {
             "geometry": {
@@ -195,7 +195,7 @@ var hospitales = {
             "properties": {
                 "popupContent": "U.M.A.P.S La Ermita"
             },
-            "id": 74
+            "id": 14
         },
         {
             "geometry": {
@@ -209,35 +209,217 @@ var hospitales = {
             "properties": {
                 "popupContent": "Clinica Fratello"
             },
-            "id": 74
+            "id": 15
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -101.680128,
-                    21.132544
+                    21.132544,
+                    -101.680128
                 ]
             },
             "type": "Feature",
             "properties": {
                 "popupContent": "Hospital General de Leon"
             },
-            "id": 74
+            "id": 16
         },
         {
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -101.681398,
-                    21.126094
+                    -101.679954,
+                    21.134910
                 ]
             },
             "type": "Feature",
             "properties": {
-                "popupContent": "Medica Campestre"
+                "popupContent": "Hospital General de Leon"
             },
-            "id": 74
+            "id": 17
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.651458,
+                    21.150440
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Leones"
+            },
+            "id": 18
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.680789,
+                    21.129206
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Aranda de la Parra"
+            },
+            "id": 19
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.653518,
+                    21.125303
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital la Luz"
+            },
+            "id": 20
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.664547,
+                    21.138190
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Secretaria de Salud Publica del Estado de Guanajuato"
+            },
+            "id": 21
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.714447,
+                    21.120271
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Medica Poniente"
+            },
+            "id": 22
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -101.646570,
+                    21.128050
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Clinica Sinai"
+            },
+            "id": 23
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.049966,
+                    19.427096
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Camelinas"
+            },
+            "id": 24
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.042241,
+                    19.429201
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Genaral Miguel Silva"
+            },
+            "id": 25
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.056918,
+                    19.409935
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital de Especialidades el Angel"
+            },
+            "id": 26
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.057777,
+                    19.406293
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Imperial"
+            },
+            "id": 27
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.049194,
+                    19.397306
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "ISSSTE Uruapan"
+            },
+            "id": 28
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.047673,
+                    19.419321
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital San Jorge"
+            },
+            "id": 29
+        },
+        {
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -102.053180,
+                    19.412900
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "popupContent": "Hospital Fray Juan de San Miguel"
+            },
+            "id": 30
         }
     ]
 };
